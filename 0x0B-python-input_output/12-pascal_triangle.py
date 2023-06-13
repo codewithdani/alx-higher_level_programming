@@ -11,14 +11,11 @@ def pascal_triangle(n):
         return []
 
     triangles = [[1]]
-    for i in range(1, n):
-        prev_row = triangle[i - 1]
-        curr_row = [1]
-
-        for j in range(1, i):
-            curr_row.append(prev_row[j - 1] + prev_row[j])
-
-        curr_row.append(1)
-        triangle.append(curr_row)
-
-    return triangle
+    while len(triangles) != n:
+        tri = triangles[-1]
+        tmp = [1]
+        for i in range(len(tri) - 1):
+            tmp.append(tri[i] + tri[i + 1])
+        tmp.append(1)
+        triangles.append(tmp)
+    return triangles
