@@ -14,7 +14,6 @@ class Base:
         __nb_objects (int): The number of instantiated Bases.
     """
 
-    # keeps track of the number of objects created so far
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -29,7 +28,6 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-    # static method takes a list of dictionaries as input and returns a JSON-formatted string representing the serialized version of the list.
     @staticmethod
     def to_json_string(list_dictionaries):
         """Return the JSON serialization of a list of dicts.
@@ -41,7 +39,6 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
 
-    # class method takes a list of objects as input, serializes them into a JSON-formatted string, and writes the string to a file
     @classmethod
     def save_to_file(cls, list_objs):
         """Write the JSON serialization of a list of objects to a file.
@@ -49,7 +46,6 @@ class Base:
         Args:
             list_objs (list): A list of inherited Base instances.
         """
-        # the filename will be derived from the name of the class.
         filename = cls.__name__ + ".json"
         with open(filename, "w") as jsonfile:
             if list_objs is None:
@@ -58,7 +54,6 @@ class Base:
                 list_dicts = [o.to_dictionary() for o in list_objs]
                 jsonfile.write(Base.to_json_string(list_dicts))
 
-    # static method takes a JSON-formatted string as input and returns the corresponding deserialized Python object
     @staticmethod
     def from_json_string(json_string):
         """Return the deserialization of a JSON string.
@@ -73,7 +68,6 @@ class Base:
             return []
         return json.loads(json_string)
 
-    # class method takes a dictionary of attributes as input, creates a new object and returns the created and updated object.
     @classmethod
     def create(cls, **dictionary):
         """Return a class instantied from a dictionary of attributes.
