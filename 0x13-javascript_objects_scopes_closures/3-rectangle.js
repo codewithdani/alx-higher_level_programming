@@ -8,7 +8,6 @@ class Rectangle {
             return {};
         }
     }
-
     print () {
         for (let i = 0; i < this.height; i++) {
             let row = '';
