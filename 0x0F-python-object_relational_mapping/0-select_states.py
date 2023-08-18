@@ -5,10 +5,11 @@ This script connects to a MySQL database and lists all states from the hbtn_0e_0
 import MySQLdb
 import sys
 
+
 if __name__ == "__main__":
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
+    username = "root"
+    password = "root"
+    database = "my_db"
 
     # Connect to the database
     db = MySQLdb.connect(host="localhost", user=username,
