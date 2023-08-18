@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-This script connects to a MySQL database and lists all cities of a given state
-from the hbtn_0e_4_usa database, using parameterized queries.
-"""
+""" lists all cities of a given state from the hbtn_0e_4_usa database."""
 import MySQLdb
 import sys
 
