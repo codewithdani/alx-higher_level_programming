@@ -21,10 +21,10 @@ if __name__ == "__main__":
     # Create and add the new State object
     new_state = State(name="Louisiana")
     session.add(new_state)
-    session.commit()
+    new_instance = session.query(State).filter_by(name='Louisiana').first()
 
     # Print the new states.id
-    print(new_state.id)
-
+    print(new_instance.id)
+    session.commit()
     # Close the session
     session.close()
