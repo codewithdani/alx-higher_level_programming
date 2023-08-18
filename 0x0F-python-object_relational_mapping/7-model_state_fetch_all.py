@@ -4,7 +4,7 @@ This script lists all State objects from the hbtn_0e_6_usa database.
 """
 import sys
 from model_state import Base, State
-from sqlalchemy import create_engine
+from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
