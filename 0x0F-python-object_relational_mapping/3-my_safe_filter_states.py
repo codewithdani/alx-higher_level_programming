@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-This script connects to a MySQL database and displays all values in the states table
-of hbtn_0e_0_usa where the name matches the provided argument (safe from SQL injection).
-"""
+""" lists all states from the database hbtn_0e_0_usa """
 import MySQLdb
 import sys
 
