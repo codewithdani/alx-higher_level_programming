@@ -16,4 +16,4 @@ if __name__ == "__main__":
     for r in res:
         print(r)
     cur.close()
-    db.close(i)
+    db.close()
