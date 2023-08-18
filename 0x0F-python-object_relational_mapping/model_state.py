@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-This script defines the State class and creates an instance Base for SQLAlchemy.
+"""This script defines the State class and creates an instance Base for SQLAlchemy.
 """
 import sys
 from model_state import Base, State
