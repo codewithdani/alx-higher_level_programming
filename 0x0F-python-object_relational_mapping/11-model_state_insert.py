@@ -26,5 +26,3 @@ if __name__ == "__main__":
     # Print the new states.id
     print(new_instance.id)
     session.commit()
-    # Close the session
-    session.close()
