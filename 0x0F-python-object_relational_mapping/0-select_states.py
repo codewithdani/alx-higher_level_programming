@@ -2,8 +2,8 @@
 """
 This script connects to a MySQL database and lists all states from the hbtn_0e_0_usa database.
 """
-import sys
 import MySQLdb
+import sys
 
 
 if __name__ == "__main__":
@@ -16,4 +16,4 @@ if __name__ == "__main__":
     for r in res:
         print(r)
     cur.close()
-    db.close()
+    db.close(i)
