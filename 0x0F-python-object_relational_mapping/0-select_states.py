@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This script connects to a MySQL database and lists all states from the hbtn_0e_0_usa database."""
+"""  This script connects to a MySQL database and lists all states from the hbtn_0e_0_usa database. """
 import MySQLdb
 import sys
 
@@ -10,8 +10,8 @@ if __name__ == "__main__":
                          port=3306)
     cur = db.cursor()
     cur.execute("SELECT * FROM states")
-    res = cur.fetchall()
-    for r in res:
-        print(r)
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
     cur.close()
     db.close()
