@@ -21,7 +21,7 @@ if __name__ == "__main__":
     session = Session()
 
     # Query the State object by name
-    state = session.query(State) \.filter(State.name == search_name).one_or_none()
+    state = session.query(State).filter(State.name == (search_name,))
 
     if state:
         print(state.id)
