@@ -1,5 +1,11 @@
 #!/usr/bin/python3
-"""lists all states from the hbtn_0e_0_usa database."""
+
+"""
+    A script that lists all states from the database hbtn_0e_0_usa
+    Username, password and database names are given as user args
+"""
+
+
 import MySQLdb
 import sys
 
