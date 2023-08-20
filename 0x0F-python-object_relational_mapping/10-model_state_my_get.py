@@ -24,7 +24,7 @@ if __name__ == "__main__":
     # Query the State object by name
     state = session.query(State).filter(State.name == (search_name,))
 
-    if state:
+    try:
         print(state[0].id)
-    else:
+    except IndexError:
         print("Not found")
