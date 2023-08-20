@@ -1,5 +1,5 @@
 #!/usr/bin/pytho3
-"""  lists all states from the database hbtn_0e_0_usa """
+""" lists all states from the database hbtn_0e_0_usa """
 import sys
 import MySQLdb
 
