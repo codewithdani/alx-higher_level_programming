@@ -22,8 +22,7 @@ if __name__ == '__main__':
     session = Session()
 
     # extract first state
-    states = session.query(State).filter(State.name.ilike('%a%')) \
-                    .order_by(State.id).all()
+    states = session.query(State).filter(State.name.ilike('%a%'))
 
     #print states
     for state in states:
