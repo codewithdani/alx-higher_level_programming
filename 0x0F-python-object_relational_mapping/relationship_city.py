@@ -5,6 +5,7 @@ This script defines the City class.
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from relationship_state import Base
+from sqlalchemy.ext.declarative import declarative_base
 
 
 class City(Base):
